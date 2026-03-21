@@ -32,7 +32,7 @@ public class TopKFreqElements {
         }
 
         int[] resArr = new int[k];
-        for(int i = 0; i < k i++) {
+        for(int i = 0; i < k; i++) {
             resArr[i] = result.get(i);
         }
 
