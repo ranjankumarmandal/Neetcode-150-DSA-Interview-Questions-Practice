@@ -1,5 +1,6 @@
 package org.example.a_array_and_hashing;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EncodeAndDecodeString {
