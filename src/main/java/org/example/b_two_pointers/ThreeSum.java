@@ -1,5 +1,7 @@
 package org.example.b_two_pointers;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ThreeSum {
@@ -24,7 +26,7 @@ public class ThreeSum {
                     List<Integer> triplet = Arrays.asList(nums[i], nums[left], nums[right]);
                     result.add(triplet);
 
-                    while(left < right && nums[left] == nums[left - 1])l left++;
+                    while(left < right && nums[left] == nums[left - 1]) left++;
                     while(left < right && nums[right] == nums[right - 1]) right--;
 
                     left++;
