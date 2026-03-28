@@ -14,5 +14,10 @@ public class TimeBasedKeyValueStore {
         map = new HashMap<>();
     }
 
+    public void set(String key, String value, int timestamp) {
+        if(!map.containsKey(key)) map.put(key, new ArrayList<>());
+        map.get(key).add(new Pair(timestamp, value));
+    }
+
 
 }
