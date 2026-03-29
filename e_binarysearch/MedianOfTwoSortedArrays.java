@@ -21,6 +21,8 @@ public class MedianOfTwoSortedArrays {
             if(maxLeft1 <= minRight2 && maxLeft2 <= minRight1) {
                 if((m + n) % 2 == 1) return Math.max(maxLeft1, minLeft2) * 1.0;
                 else return (Math.max(maxLeft1, maxLeft2) + Math.min(minRight1, minRight2)) / 2.0;
+            } else if(maxLeft1 > minRight2) {
+                right = partition1 - 1;
             }
         }
 
