@@ -23,6 +23,8 @@ public class MedianOfTwoSortedArrays {
                 else return (Math.max(maxLeft1, maxLeft2) + Math.min(minRight1, minRight2)) / 2.0;
             } else if(maxLeft1 > minRight2) {
                 right = partition1 - 1;
+            } else {
+                left = partititon1 + 1;
             }
         }
 
