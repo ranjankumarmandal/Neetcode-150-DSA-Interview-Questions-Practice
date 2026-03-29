@@ -18,7 +18,10 @@ public class MedianOfTwoSortedArrays {
             int maxLeft1 = (partition2 == 0) ? Integer.MIN_VALUE : nums2[partition2 - 1];
             int minRight1 = (partition2 == 0) ? Integer.MAX_VALUE : nums2[partition2];
 
-
+            if(maxLeft1 <= minRight2 && maxLeft2 <= minRight1) {
+                if((m + n) % 2 == 1) return Math.max(maxLeft1, minLeft2) * 1.0;
+                else return (Math.max(maxLeft1, maxLeft2) + Math.min(minRight1, minRight2)) / 2.0;
+            }
         }
 
         throw new IllegalArgumentException();
