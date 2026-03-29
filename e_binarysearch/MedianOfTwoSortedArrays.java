@@ -1,5 +1,26 @@
 public class MedianOfTwoSortedArrays {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        if(nums1.length > nums2.length) return findMedianSortedArrays(nums2, nums1);
 
+        int m = nums1.length;
+        int n = nums2.length;
+
+        int left  = 0;
+        int right = m;
+
+        while(left <= right) {
+            int partition1 = (left + right) / 2;
+            int partition2 = (m + n + 1) / 2 - partition1;
+
+            int maxLeft1 = (partition1 == 0) ? Integer.MIN_VALUE : nums1[partition1 - 1];
+            int minRight1 = (partition1 == 0) ? Integer.MAX_VALUE : nums1[partition1];
+
+            int maxLeft1 = (partition2 == 0) ? Integer.MIN_VALUE : nums2[partition2 - 1];
+            int minRight1 = (partition2 == 0) ? Integer.MAX_VALUE : nums2[partition2];
+
+
+        }
+
+        throw new IllegalArgumentException();
     }
 }
