@@ -11,5 +11,7 @@ public class ReverseLinkedList {
             curr = next;
         }
 
+        return prev;
+
     }
 }
