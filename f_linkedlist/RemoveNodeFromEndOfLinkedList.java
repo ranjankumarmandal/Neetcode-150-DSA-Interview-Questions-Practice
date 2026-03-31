@@ -7,6 +7,10 @@ public class RemoveNodeFromEndOfLinkedList {
             curr = curr.next;
         }
 
+        if (length == n) {
+            return head.next;
+        }
+
         return head;
     }
 }
