@@ -7,6 +7,13 @@ public class ReorderLinkedList {
             return;
         }
 
+        ArrayList<ListNode> nodes = new ArrayList<ListNode>();
+        ListNode cur = head;
+        while (cur != null) {
+            nodes.add(cur);
+            cur = cur.next;
+        }
+
         int left = 0;
         int right = nodes.size() - 1;
 
