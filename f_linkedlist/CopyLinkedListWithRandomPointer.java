@@ -21,6 +21,15 @@ public class CopuLinkedListWithRandomPointer {
         curr = head;
         Node newHead = head.next;
 
+        while (curr != null) {
+            Node copy = curr.next;
+            curr.next = copy.next;
+            if (copy.next != null) {
+                copy.next = copy.next.next;
+            }
+            curr = curr.next;
+        }
+
         return newHead;
     }
 }
