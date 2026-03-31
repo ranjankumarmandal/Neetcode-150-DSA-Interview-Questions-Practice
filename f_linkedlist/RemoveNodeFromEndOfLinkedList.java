@@ -11,6 +11,9 @@ public class RemoveNodeFromEndOfLinkedList {
             return head.next;
         }
 
+        curr = head;
+
+
         return head;
     }
 }
