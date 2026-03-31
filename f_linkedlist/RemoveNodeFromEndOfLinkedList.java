@@ -12,7 +12,9 @@ public class RemoveNodeFromEndOfLinkedList {
         }
 
         curr = head;
-
+        for (int i = 1; i < length - n; i++) {
+            curr = curr.next;
+        }
 
         return head;
     }
