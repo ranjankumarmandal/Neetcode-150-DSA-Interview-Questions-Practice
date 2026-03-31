@@ -17,6 +17,7 @@ public class ReorderLinkedList {
                 tail = nodes.get(left);
             } else {
                 tail.next = nodes.get(left);
+                tail = tail.next;
             }
             left = left + 1;
 
