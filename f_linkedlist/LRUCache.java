@@ -1,13 +1,13 @@
 public class LRUCache {
-    public LRUCache(int capacity) {
+    private static class Node {
+        int key;
+        int value;
+        Node prev;
+        Node next;
 
-    }
-
-    public int get(int key) {
-
-    }
-
-    public void put(int key, int value) {
-
+        Node(int key, int value) {
+            this.key = key;
+            this.value = value;
+        }
     }
 }
