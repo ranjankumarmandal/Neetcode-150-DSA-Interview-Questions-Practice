@@ -72,4 +72,13 @@ public class LRUCache {
         this.head.next = node;
         first.prev = node;
     }
+
+    private void remove(Node node) {
+        Node p = node.prev;
+        Node n = node.next;
+        p.next = n;
+        n.prev = p;
+        node.prev = null;
+        node.next = null;
+    }
 }
