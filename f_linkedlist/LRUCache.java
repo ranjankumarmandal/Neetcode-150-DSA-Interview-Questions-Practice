@@ -27,5 +27,38 @@ public class LRUCache {
         this.tail.prev = this.head;
     }
 
+    public int get(int key) {
+        if (this.map.containsKey(key) == false) {
+            return -1;
+        }
+
+        Node node = this.map.get(key);
+        moveToFront(node);
+        return node.value;
+    }
+
+    public void put(int key, int value) {
+        if (this.capacity == 0) {
+            return;
+        }
+
+        if (this.map.containsKey(key) == true) {
+            Node node = this.map.get(key);
+            node.value = value;
+            moveToFront(node);
+            return;
+        }
+
+        Node newNode = new Node(key, value);
+        this.map.put(key, newNode);
+        addToFront(newNode);
+
+        if (this.map.size() > this.capacity) {
+            Node lru = this.tail.prev;
+            remove(lru);
+            this.map.remove(lru.key);
+        }
+    }
+
 
 }
