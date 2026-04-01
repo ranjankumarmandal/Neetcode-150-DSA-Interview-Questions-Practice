@@ -60,5 +60,16 @@ public class LRUCache {
         }
     }
 
+    private void moveToFront(Node node) {
+        remove(node);
+        addToFront(node);
+    }
 
+    private void addToFront(Node node) {
+        Node first = this.head.next;
+        node.prev = this.head;
+        node.next = first;
+        this.head.next = node;
+        first.prev = node;
+    }
 }
