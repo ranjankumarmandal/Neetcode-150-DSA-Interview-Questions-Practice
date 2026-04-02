@@ -1,5 +1,8 @@
 public class DiameterOfBinaryTree {
-    public int diameterOfBinaryTree(TreeNode root) {
+    pint diameter = 0;
 
+    public int diameterOfBinaryTree(TreeNode root) {
+        dfs(root);
+        return diameter;
     }
 }
