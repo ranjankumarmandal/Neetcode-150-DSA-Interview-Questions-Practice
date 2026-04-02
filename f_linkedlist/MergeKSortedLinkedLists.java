@@ -13,6 +13,16 @@ public class MergeKSortedLinkedList {
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
 
+        while (!minHeap.isEmpty()) {
+            ListNode node = minHeap.poll();
+            curr.next = node;
+            curr = curr.next;
+
+            if (node.next != null) {
+                minHeap.add(node.next);
+            }
+        }
+
         return dummy.next;
     }
 }
