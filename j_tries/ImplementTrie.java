@@ -10,4 +10,8 @@ public class ImplementTrie {
     public boolean search(String word) {
 
     }
+
+    public boolean startsWith(String prefix) {
+
+    }
 }
