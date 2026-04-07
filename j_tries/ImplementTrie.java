@@ -6,4 +6,8 @@ public class ImplementTrie {
     public void insert(String word) {
 
     }
+
+    public boolean search(String word) {
+
+    }
 }
