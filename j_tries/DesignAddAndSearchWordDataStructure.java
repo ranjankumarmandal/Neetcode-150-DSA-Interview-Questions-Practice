@@ -1,13 +1,12 @@
 public class DesignAddAndSearchWordDataStructure {
+    private static class Node {
+        Node[] children = new Node[26];
+        boolean end;
+    }
+
+    private final Node root;
+
     public WordDictionary() {
-
-    }
-
-    public void addWord(String word) {
-
-    }
-
-    public boolean search(String word) {
-
+        root = new Node();
     }
 }
