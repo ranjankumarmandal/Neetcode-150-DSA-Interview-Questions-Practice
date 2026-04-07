@@ -6,4 +6,8 @@ public class DesignAddAndSearchWordDataStructure {
     public void addWord(String word) {
 
     }
+
+    public boolean search(String word) {
+
+    }
 }
