@@ -25,6 +25,17 @@ public class NQueens {
         for (int c = 0; c < n; c++) {
             if (col[c] || posDiag[r + c] || negDiag[r - c + n]) continue;
 
+            col[c] = true;
+            posDiag[r + c] = true;
+            negDiag[r - c + n] = true;
+            board[r][c] = 'Q';
+
+            backtrack(r + 1, n, board, col, posDiag, negDiag, res);
+
+            board[r][c] = '.';
+            col[c] = false;
+            posDiag[r + c] = false;
+            negDiag[r - c + n] = false;
         }
     }
 }
