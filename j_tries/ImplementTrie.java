@@ -1,17 +1,13 @@
 public class ImplementTrie {
-    public PrefixTree() {
-
+    private static class Node {
+        Node[] children = new Node[26];
+        boolean end;
     }
 
-    public void insert(String word) {
+    private final Node root;
 
+    public Trie() {
+        root = new Node();
     }
 
-    public boolean search(String word) {
-
-    }
-
-    public boolean startsWith(String prefix) {
-
-    }
 }
