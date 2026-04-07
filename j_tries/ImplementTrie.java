@@ -19,4 +19,15 @@ public class ImplementTrie {
         }
         cur.end = true;
     }
+
+
+    public boolean startsWith(String prefix) {
+        Node cur = root;
+        for (char c : prefix.toCharArray()) {
+            int i = c - 'a';
+            if (cur.children[i] == null) return false;
+            cur = cur.children[i];
+        }
+        return true;
+    }
 }
