@@ -11,4 +11,20 @@ public class NQueens {
         backtrack(0, n, board, col, posDiag, negDiag, res);
         return res;
     }
+
+    private void backtrack(int r, int n, char[][] board,
+                           boolean[] col, boolean[] posDiag, boolean[] negDiag,
+                           List<List<String>> res) {
+        if (r == n) {
+            List<String> curr = new ArrayList<>();
+            for (char[] row : board) curr.add(new String(row));
+            res.add(curr);
+            return;
+        }
+
+        for (int c = 0; c < n; c++) {
+            if (col[c] || posDiag[r + c] || negDiag[r - c + n]) continue;
+
+        }
+    }
 }
