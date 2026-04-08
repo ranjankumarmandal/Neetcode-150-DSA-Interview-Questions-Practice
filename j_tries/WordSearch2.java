@@ -66,4 +66,10 @@ public class WordSearch2 {
         }
     }
 
+    private boolean isEmpty(TrieNode node) {
+        for (TrieNode child : node.children) {
+            if (child != null) return false;
+        }
+        return true;
+    }
 }
