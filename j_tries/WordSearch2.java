@@ -52,7 +52,18 @@ public class WordSearch2 {
             node.wordIndex = -1;
         }
 
+        board[r][c] = '#';
 
+        dfs(board, r + 1, c, node);
+        dfs(board, r - 1, c, node);
+        dfs(board, r, c + 1, node);
+        dfs(board, r, c - 1, node);
+
+        board[r][c] = ch;
+
+        if (isEmpty(node)) {
+            TrieNode parent = node;
+        }
     }
 
 }
