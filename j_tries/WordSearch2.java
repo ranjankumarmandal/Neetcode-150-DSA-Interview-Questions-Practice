@@ -26,4 +26,9 @@ public class WordSearch2 {
 
         return res;
     }
+
+    private void insert(TrieNode root, String word, int index) {
+        TrieNode node = root;
+
+    }
 }
