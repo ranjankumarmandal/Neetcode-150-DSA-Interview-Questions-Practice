@@ -38,4 +38,11 @@ public class WordSearch2 {
         }
         node.wordIndex = index;
     }
+
+    private void dfs(char[][] board, int r, int c, TrieNode node) {
+        if (r < 0 || c < 0 || r >= rows || c >= cols) return;
+
+
+    }
+
 }
