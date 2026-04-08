@@ -1,5 +1,8 @@
 public class WordSearch2 {
-    public List<String> findWords(char[][] board, String[] words) {
-
+    static class TrieNode {
+        TrieNode[] children = new TrieNode[26];
+        int wordIndex = -1;
     }
+
+
 }
