@@ -42,6 +42,16 @@ public class WordSearch2 {
     private void dfs(char[][] board, int r, int c, TrieNode node) {
         if (r < 0 || c < 0 || r >= rows || c >= cols) return;
 
+        char ch = board[r][c];
+        if (ch == '#' || node.children[ch - 'a'] == null) return;
+
+        node = node.children[ch - 'a'];
+
+        if (node.wordIndex != -1) {
+            res.add(words[node.wordIndex]);
+            node.wordIndex = -1;
+        }
+
 
     }
 
