@@ -8,5 +8,11 @@ public class WordSearch2 {
     private String[] words;
     private int rows, cols;
 
+    public List<String> findWords(char[][] board, String[] words) {
+        this.words = words;
+        rows = board.length;
+        cols = board[0].length;
 
+
+    }
 }
