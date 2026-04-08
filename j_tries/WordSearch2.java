@@ -4,5 +4,9 @@ public class WordSearch2 {
         int wordIndex = -1;
     }
 
+    private List<String> res = new ArrayList<>();
+    private String[] words;
+    private int rows, cols;
+
 
 }
