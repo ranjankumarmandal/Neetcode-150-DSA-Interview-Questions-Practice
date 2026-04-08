@@ -29,6 +29,13 @@ public class WordSearch2 {
 
     private void insert(TrieNode root, String word, int index) {
         TrieNode node = root;
-
+        for (char ch : word.toCharArray()) {
+            int i = ch - 'a';
+            if (node.children[i] == null) {
+                node.children[i] = new TrieNode();
+            }
+            node = node.children[i];
+        }
+        node.wordIndex = index;
     }
 }
