@@ -13,6 +13,17 @@ public class WordSearch2 {
         rows = board.length;
         cols = board[0].length;
 
+        TrieNode root = new TrieNode();
+        for (int i = 0; i < words.length; i++) {
+            insert(root, words[i], i);
+        }
 
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                dfs(board, r, c, root);
+            }
+        }
+
+        return res;
     }
 }
