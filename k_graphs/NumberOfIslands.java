@@ -13,4 +13,8 @@ public class NumberOfIslands {
 
         return count;
     }
+
+    private void dfs(char[][] grid, int i, int j) {
+
+    }
 }
