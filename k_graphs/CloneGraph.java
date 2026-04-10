@@ -5,4 +5,12 @@ public class CloneGraph {
         if (node == null) return null;
         return dfs(node);
     }
+
+    private Node dfs(Node node) {
+        if (map.containsKey(node)) return map.get(node);
+
+        Node copy = new Node(node.val);
+
+        return copy;
+    }
 }
