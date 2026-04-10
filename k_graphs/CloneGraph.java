@@ -10,6 +10,8 @@ public class CloneGraph {
         if (map.containsKey(node)) return map.get(node);
 
         Node copy = new Node(node.val);
+        map.put(node, copy);
+
 
         return copy;
     }
