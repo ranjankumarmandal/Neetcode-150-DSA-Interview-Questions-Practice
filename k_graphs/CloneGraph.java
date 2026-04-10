@@ -1,5 +1,3 @@
 public class CloneGraph {
-    public Node cloneGraph(Node node) {
-
-    }
+    private Map<Node, Node> map = new HashMap<>();
 }
