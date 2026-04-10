@@ -12,6 +12,9 @@ public class CloneGraph {
         Node copy = new Node(node.val);
         map.put(node, copy);
 
+        for (Node nei : node.neighbors) {
+            copy.neighbors.add(dfs(nei));
+        }
 
         return copy;
     }
