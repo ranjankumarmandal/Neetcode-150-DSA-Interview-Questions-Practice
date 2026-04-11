@@ -31,4 +31,18 @@ public class PacificAtlanticWaterFlow {
 
         return res;
     }
+
+    private void dfs(int r, int c, boolean[][] ocean, int[][] heights) {
+        ocean[r][c] = true;
+
+        for (int[] d : dirs) {
+            int nr = r + d[0];
+            int nc = c + d[1];
+
+            if (nr < 0 || nc < 0 || nr >= rows || nc >= cols || ocean[nr][nc]) continue;
+            if (heights[nr][nc] < heights[r][c]) continue;
+
+            dfs(nr, nc, ocean, heights);
+        }
+    }
 }
