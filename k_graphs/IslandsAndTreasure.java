@@ -14,6 +14,21 @@ public class IslandsAndTreasure {
 
         int[][] dirs = {{1,0},{-1,0},{0,1},{0,-1}};
 
+        while (!q.isEmpty()) {
+            int[] cur = q.poll();
+            int r = cur[0], c = cur[1];
 
+            for (int[] d : dirs) {
+                int nr = r + d[0];
+                int nc = c + d[1];
+
+                if (nr < 0 || nc < 0 || nr >= rows || nc >= cols || grid[nr][nc] != 2147483647) {
+                    continue;
+                }
+
+                grid[nr][nc] = grid[r][c] + 1;
+                q.offer(new int[]{nr, nc});
+            }
+        }
     }
 }
