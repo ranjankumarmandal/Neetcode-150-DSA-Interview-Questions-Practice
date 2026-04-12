@@ -15,6 +15,19 @@ public class CourseSchedule2 {
             if (indegree[i] == 0) q.offer(i);
         }
 
+        int[] res = new int[numCourses];
+        int idx = 0;
 
+        while (!q.isEmpty()) {
+            int node = q.poll();
+            res[idx++] = node;
+
+            for (int nei : adj.get(node)) {
+                indegree[nei]--;
+                if (indegree[nei] == 0) q.offer(nei);
+            }
+        }
+
+        return idx == numCourses ? res : new int[0];
     }
 }
