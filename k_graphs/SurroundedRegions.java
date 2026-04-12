@@ -22,4 +22,15 @@ public class SurroundedRegions {
             }
         }
     }
+
+    private void dfs(char[][] board, int r, int c) {
+        if (r < 0 || c < 0 || r >= rows || c >= cols || board[r][c] != 'O') return;
+
+        board[r][c] = 'T';
+
+        dfs(board, r + 1, c);
+        dfs(board, r - 1, c);
+        dfs(board, r, c + 1);
+        dfs(board, r, c - 1);
+    }
 }
