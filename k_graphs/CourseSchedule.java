@@ -18,4 +18,18 @@ public class CourseSchedule {
 
         return true;
     }
+
+    private boolean dfs(int node) {
+        if (state[node] == 1) return false;
+        if (state[node] == 2) return true;
+
+        state[node] = 1;
+
+        for (int nei : graph.get(node)) {
+            if (!dfs(nei)) return false;
+        }
+
+        state[node] = 2;
+        return true;
+    }
 }
