@@ -20,4 +20,13 @@ public class CountConnectedComponents {
         if (parent[x] != x) parent[x] = find(parent[x], parent);
         return parent[x];
     }
+
+    private boolean union(int a, int b, int[] parent, int[] rank) {
+        int pa = find(a, parent);
+        int pb = find(b, parent);
+
+        if (pa == pb) return false;
+
+        return true;
+    }
 }
