@@ -5,6 +5,12 @@ public class GraphValidTree {
         int[] parent = new int[n];
         int[] rank = new int[n];
 
+        for (int i = 0; i < n; i++) parent[i] = i;
+
+        for (int[] e : edges) {
+            if (!union(e[0], e[1], parent, rank)) return false;
+        }
+
         return true;
     }
 }
