@@ -15,4 +15,9 @@ public class CountConnectedComponents {
 
         return components;
     }
+
+    private int find(int x, int[] parent) {
+        if (parent[x] != x) parent[x] = find(parent[x], parent);
+        return parent[x];
+    }
 }
