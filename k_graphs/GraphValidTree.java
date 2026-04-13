@@ -13,4 +13,9 @@ public class GraphValidTree {
 
         return true;
     }
+
+    private int find(int x, int[] parent) {
+        if (parent[x] != x) parent[x] = find(parent[x], parent);
+        return parent[x];
+    }
 }
