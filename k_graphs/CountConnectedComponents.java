@@ -27,6 +27,15 @@ public class CountConnectedComponents {
 
         if (pa == pb) return false;
 
+        if (rank[pa] < rank[pb]) {
+            parent[pa] = pb;
+        } else if (rank[pa] > rank[pb]) {
+            parent[pb] = pa;
+        } else {
+            parent[pb] = pa;
+            rank[pa]++;
+        }
+
         return true;
     }
 }
