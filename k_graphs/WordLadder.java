@@ -22,7 +22,19 @@ public class WordLadder {
                 for (int j = 0; j < arr.length; j++) {
                     char original = arr[j];
 
+                    for (char c = 'a'; c <= 'z'; c++) {
+                        if (c == original) continue;
 
+                        arr[j] = c;
+                        String next = new String(arr);
+
+                        if (set.contains(next)) {
+                            q.offer(next);
+                            set.remove(next);
+                        }
+                    }
+
+                    arr[j] = original;
                 }
             }
 
