@@ -19,7 +19,11 @@ public class WordLadder {
 
                 char[] arr = word.toCharArray();
 
+                for (int j = 0; j < arr.length; j++) {
+                    char original = arr[j];
 
+
+                }
             }
 
             level++;
