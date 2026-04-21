@@ -5,7 +5,19 @@ public class RedundantConnection {
         int n = edges.length;
         parent = new int[n + 1];
 
+        for (int i = 1; i <= n; i++) {
+            parent[i] = i;
+        }
 
+        for (int[] e : edges) {
+            int u = e[0], v = e[1];
+
+            if (find(u) == find(v)) {
+                return e;
+            }
+
+            union(u, v);
+        }
 
         return new int[0];
     }
