@@ -36,6 +36,15 @@ public class AlienDictionary {
 
         StringBuilder res = new StringBuilder();
 
+        while (!q.isEmpty()) {
+            char c = q.poll();
+            res.append(c);
+            for (char nei : adj.get(c)) {
+                indegree.put(nei, indegree.get(nei) - 1);
+                if (indegree.get(nei) == 0) q.offer(nei);
+            }
+        }
+
         return res.length() == indegree.size() ? res.toString() : "";
     }
 }
