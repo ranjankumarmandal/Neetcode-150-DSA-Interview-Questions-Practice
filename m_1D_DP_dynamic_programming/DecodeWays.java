@@ -14,6 +14,9 @@ public class DecodeWays {
                     curr += next2;
                 }
             }
+
+            next2 = next1;
+            next1 = curr;
         }
 
         return next1;
