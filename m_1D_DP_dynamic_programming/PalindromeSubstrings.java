@@ -10,5 +10,15 @@ public class PalindromeSubstrings {
         return count;
     }
 
+    private int expand(String s, int left, int right) {
+        int res = 0;
 
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            res++;
+            left--;
+            right++;
+        }
+
+        return res;
+    }
 }
